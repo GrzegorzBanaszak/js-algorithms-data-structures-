@@ -16,4 +16,13 @@ const fibonacci = (n) => {
   return fib;
 };
 
-module.exports = { fibonacci };
+//Factorial of a number - O(n)
+const factorial = (n) => {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+};
+
+module.exports = { fibonacci, factorial };
