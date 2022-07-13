@@ -25,4 +25,13 @@ const factorial = (n) => {
   return result;
 };
 
-module.exports = { fibonacci, factorial };
+//Prime number - O(n)
+const isPrime = (n) => {
+  if (n < 2) return false;
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) return false;
+  }
+  return true;
+};
+
+module.exports = { fibonacci, factorial, isPrime };
