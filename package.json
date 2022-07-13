@@ -1,0 +1,23 @@
+{
+  "name": "js-algorithms-data-structures-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrzegorzBanaszak/js-algorithms-data-structures-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrzegorzBanaszak/js-algorithms-data-structures-/issues"
+  },
+  "homepage": "https://github.com/GrzegorzBanaszak/js-algorithms-data-structures-#readme",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}
