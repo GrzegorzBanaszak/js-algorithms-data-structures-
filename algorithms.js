@@ -25,13 +25,25 @@ const factorial = (n) => {
   return result;
 };
 
-//Prime number - O(n)
+//Prime number - O(sqrt(n))
 const isPrime = (n) => {
   if (n < 2) return false;
-  for (let i = 2; i < n; i++) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) return false;
   }
   return true;
 };
 
-module.exports = { fibonacci, factorial, isPrime };
+// Power of two
+const isPowerOfTwo = (n) => {
+  if (n < 1) return false;
+
+  while (n > 1) {
+    if (n % 2 !== 0) return false;
+    n = n / 2;
+  }
+
+  return true;
+};
+
+module.exports = { fibonacci, factorial, isPrime, isPowerOfTwo };

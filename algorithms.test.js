@@ -1,4 +1,4 @@
-const { fibonacci, factorial, isPrime } = require("./algorithms");
+const { fibonacci, factorial, isPrime, isPowerOfTwo } = require("./algorithms");
 
 describe("fibonacci", () => {
   test("2 should return [0,1]", () => {
@@ -36,5 +36,17 @@ describe("is prime", () => {
   });
   test("5 should return true", () => {
     expect(isPrime(5)).toBe(true);
+  });
+});
+
+describe("is power of 2", () => {
+  test("1 should return true", () => {
+    expect(isPowerOfTwo(1)).toBe(true);
+  });
+  test("2 should return true", () => {
+    expect(isPowerOfTwo(2)).toBe(true);
+  });
+  test("5 should return false", () => {
+    expect(isPowerOfTwo(5)).toBe(false);
   });
 });
