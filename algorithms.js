@@ -34,7 +34,7 @@ const isPrime = (n) => {
   return true;
 };
 
-// Power of two
+// Power of two - O(log(n))
 const isPowerOfTwo = (n) => {
   if (n < 1) return false;
 
@@ -44,6 +44,13 @@ const isPowerOfTwo = (n) => {
   }
 
   return true;
+};
+
+// Power of two - O(1)
+const isPowerOfTwoBitWise = (n) => {
+  if (n < 1) return false;
+
+  return (n & (n - 1)) === 0;
 };
 
 module.exports = { fibonacci, factorial, isPrime, isPowerOfTwo };
