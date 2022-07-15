@@ -53,4 +53,12 @@ const isPowerOfTwoBitWise = (n) => {
   return (n & (n - 1)) === 0;
 };
 
-module.exports = { fibonacci, factorial, isPrime, isPowerOfTwo };
+// O(n)
+const linearSearch = (arr, target) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) return i;
+  }
+  return -1;
+};
+
+module.exports = { fibonacci, factorial, isPrime, isPowerOfTwo, linearSearch };
