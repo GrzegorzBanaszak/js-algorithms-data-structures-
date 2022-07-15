@@ -4,6 +4,7 @@ const {
   isPrime,
   isPowerOfTwo,
   linearSearch,
+  binarySearch,
 } = require("./algorithms");
 
 describe("fibonacci", () => {
@@ -66,5 +67,17 @@ describe("Linear search", () => {
   });
   test("[-5,2,10,4,6] return -1", () => {
     expect(linearSearch([-5, 2, 10, 4, 6], 20)).toBe(-1);
+  });
+});
+
+describe("Binary search", () => {
+  test("[-5, 2, 4, 6, 10] return 4", () => {
+    expect(binarySearch([-5, 2, 4, 6, 10], 10)).toBe(4);
+  });
+  test("[-5, 2, 4, 6, 10] return 3", () => {
+    expect(binarySearch([-5, 2, 4, 6, 10], 6)).toBe(3);
+  });
+  test("[-5, 2, 4, 6, 10] return -1", () => {
+    expect(binarySearch([-5, 2, 4, 6, 10], 20)).toBe(-1);
   });
 });

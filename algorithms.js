@@ -61,4 +61,31 @@ const linearSearch = (arr, target) => {
   return -1;
 };
 
-module.exports = { fibonacci, factorial, isPrime, isPowerOfTwo, linearSearch };
+// O(logn)
+const binarySearch = (arr, target) => {
+  let leftIndex = 0;
+  let rightIndex = arr.length - 1;
+
+  while (leftIndex <= rightIndex) {
+    let middleElement = Math.floor((leftIndex + rightIndex) / 2);
+
+    if (arr[middleElement] === target) return middleElement;
+
+    if (target < arr[middleElement]) {
+      rightIndex = middleElement - 1;
+    } else {
+      leftIndex = middleElement + 1;
+    }
+  }
+
+  return -1;
+};
+
+module.exports = {
+  fibonacci,
+  factorial,
+  isPrime,
+  isPowerOfTwo,
+  linearSearch,
+  binarySearch,
+};
