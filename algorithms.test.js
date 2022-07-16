@@ -6,6 +6,7 @@ const {
   linearSearch,
   binarySearch,
   binarySearchRecursive,
+  bubbleSort,
 } = require("./algorithms");
 
 describe("fibonacci", () => {
@@ -92,5 +93,11 @@ describe("Binary search", () => {
   });
   test("[-5, 2, 4, 6, 10] return -1", () => {
     expect(binarySearchRecursive([-5, 2, 4, 6, 10], 20)).toBe(-1);
+  });
+});
+
+describe("Bubble sort ", () => {
+  test("[8,20,-2,4,-6] return [-6,-2,4,8,20]", () => {
+    expect(bubbleSort([8, 20, -2, 4, -6])).toEqual([-6, -2, 4, 8, 20]);
   });
 });
