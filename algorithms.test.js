@@ -5,6 +5,7 @@ const {
   isPowerOfTwo,
   linearSearch,
   binarySearch,
+  binarySearchRecursive,
 } = require("./algorithms");
 
 describe("fibonacci", () => {
@@ -79,5 +80,17 @@ describe("Binary search", () => {
   });
   test("[-5, 2, 4, 6, 10] return -1", () => {
     expect(binarySearch([-5, 2, 4, 6, 10], 20)).toBe(-1);
+  });
+});
+
+describe("Binary search", () => {
+  test("[-5, 2, 4, 6, 10] return 4", () => {
+    expect(binarySearchRecursive([-5, 2, 4, 6, 10], 10)).toBe(4);
+  });
+  test("[-5, 2, 4, 6, 10] return 3", () => {
+    expect(binarySearchRecursive([-5, 2, 4, 6, 10], 6)).toBe(3);
+  });
+  test("[-5, 2, 4, 6, 10] return -1", () => {
+    expect(binarySearchRecursive([-5, 2, 4, 6, 10], 20)).toBe(-1);
   });
 });

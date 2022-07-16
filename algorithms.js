@@ -81,6 +81,24 @@ const binarySearch = (arr, target) => {
   return -1;
 };
 
+const binarySearchRecursive = (arr, target) => {
+  return search(arr, target, 0, arr.length - 1);
+};
+
+const search = (arr, target, leftIndex, rightIndex) => {
+  if (leftIndex > rightIndex) return -1;
+
+  let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+  if (arr[middleIndex] === target) return middleIndex;
+
+  if (target < arr[middleIndex]) {
+    return search(arr, target, leftIndex, middleIndex - 1);
+  } else {
+    return search(arr, target, middleIndex + 1, rightIndex);
+  }
+};
+
 module.exports = {
   fibonacci,
   factorial,
@@ -88,4 +106,5 @@ module.exports = {
   isPowerOfTwo,
   linearSearch,
   binarySearch,
+  binarySearchRecursive,
 };
