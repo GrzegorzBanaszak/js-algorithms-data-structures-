@@ -7,6 +7,7 @@ const {
   binarySearch,
   binarySearchRecursive,
   bubbleSort,
+  insertionSort,
 } = require("./algorithms");
 
 describe("fibonacci", () => {
@@ -99,5 +100,19 @@ describe("Binary search", () => {
 describe("Bubble sort ", () => {
   test("[8,20,-2,4,-6] return [-6,-2,4,8,20]", () => {
     expect(bubbleSort([8, 20, -2, 4, -6])).toEqual([-6, -2, 4, 8, 20]);
+  });
+});
+
+describe("Bubble sort ", () => {
+  test("[8,20,-2,4,-6] return [-6,-2,4,8,20]", () => {
+    expect(bubbleSort([8, 20, -2, 4, -6])).toEqual([-6, -2, 4, 8, 20]);
+  });
+});
+
+describe("Insertion Sort ", () => {
+  test("[8,20,-2,4,-6] after sort [-6,-2,4,8,20]", () => {
+    const toSort = [8, 20, -2, 4, -6];
+    insertionSort(toSort);
+    expect(toSort).toEqual([-6, -2, 4, 8, 20]);
   });
 });
