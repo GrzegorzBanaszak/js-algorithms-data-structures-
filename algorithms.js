@@ -129,6 +129,26 @@ const insertionSort = (arr) => {
   }
 };
 
+//Worst case - O(n^2)
+//Avg case - O(nlogn)
+const quickSort = (arr) => {
+  if (arr.length < 2) {
+    return arr;
+  }
+  let pivot = arr[arr.length - 1];
+  let leftSize = [];
+  let rightSize = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      leftSize.push(arr[i]);
+    } else {
+      rightSize.push(arr[i]);
+    }
+  }
+
+  return [...quickSort(leftSize), pivot, ...quickSort(rightSize)];
+};
+
 module.exports = {
   fibonacci,
   factorial,
@@ -139,4 +159,5 @@ module.exports = {
   binarySearchRecursive,
   bubbleSort,
   insertionSort,
+  quickSort,
 };
